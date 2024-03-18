@@ -2,7 +2,7 @@
 
 Opinionated security and code quality standard for [smart account modules](https://blog.rhinestone.wtf/wtf-is-modular-account-abstraction-7f1621604812).
 
-_Inspire by [Solcurity](https://github.com/transmissions11/solcurity)_
+_Inspired by [Solcurity](https://github.com/transmissions11/solcurity)_
 
 ## General Review Approach
 
