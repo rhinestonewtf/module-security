@@ -1,10 +1,14 @@
-# Smart Account Module Audit Checklist
+# Smart Account Module Security
 
-## Checklist
+Opinionated security and code quality standard for [smart account modules](https://blog.rhinestone.wtf/wtf-is-modular-account-abstraction-7f1621604812).
 
-### General Review Approach
+_Inspire by [Solcurity](https://github.com/transmissions11/solcurity)_
+
+## General Review Approach
 
 todo
+
+## Checklist
 
 ### Configuration
 
