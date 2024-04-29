@@ -61,7 +61,6 @@ todo
 |             | Has external dependencies Classifications of external dependencies? Oracles / DEXs / etc                                                     | Boolean          |
 |             | Fee mechanism                                                                                                                                | Boolean          |
 |             | Subclassifications                                                                                                                           |                  |
-|             | [what else]                                                                                                                                  |                  |
 | Validator   | Is not upgradable                                                                                                                            | Boolean          |
 |             | Is not owneable                                                                                                                              | Boolean          |
 |             | Is storage requirement 4337 compliant                                                                                                        | Boolean          |
@@ -69,19 +68,16 @@ todo
 |             | Has scoped authorization controls List of common access controls                                                                             |                  |
 |             | Is recovery module                                                                                                                           | Boolean          |
 |             | Subclassifications                                                                                                                           |                  |
-|             | [what else]                                                                                                                                  |                  |
 | Hook        | Is not upgradable                                                                                                                            | Boolean          |
 |             | Is not owneable                                                                                                                              | Boolean          |
 |             | Has external dependencies Classifications of external dependencies? Oracles / DEXs / etc                                                     | Boolean          |
 |             | Subclassifications                                                                                                                           |                  |
-|             | [what else]                                                                                                                                  |                  |
 | Fallback    | Is not upgradable                                                                                                                            | Boolean          |
 |             | Is not owneable                                                                                                                              | Boolean          |
 |             | Implements ERC2771 authorization control                                                                                                     | Boolean          |
 |             | Static call vs normal call                                                                                                                   | Boolean          |
 |             | Has external dependencies Classifications of external dependencies? Oracles / DEXs / etc                                                     | Boolean          |
 |             | Subclassifications                                                                                                                           |                  |
-|             | [what else]                                                                                                                                  |                  |
 
 ## Resources
 
