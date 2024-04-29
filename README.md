@@ -48,6 +48,41 @@ todo
 - If `moduleType` includes hook, needs to implement `preCheck`, `postCheck`
 - If `moduleType` includes fallback, no further mandatory functions
 
+## Rhinestone Attestation Schema
+
+| Category    | Variable                                                                                                                                     | Data type        |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| Module type | Validator Policy Signer Executor Hook Fallback Module types are not mutually exclusive What are the subclassifications for each module type? | Uint (module id) |
+| Executor    | Is not upgradable                                                                                                                            | Boolean          |
+|             | Is not owneable                                                                                                                              | Boolean          |
+|             | Is pausable                                                                                                                                  | Boolean          |
+|             | Does not execute delegatecall on the account                                                                                                 | Boolean          |
+|             | Is triggered by the account                                                                                                                  | Boolean          |
+|             | Has external dependencies Classifications of external dependencies? Oracles / DEXs / etc                                                     | Boolean          |
+|             | Fee mechanism                                                                                                                                | Boolean          |
+|             | Subclassifications                                                                                                                           |                  |
+|             | [what else]                                                                                                                                  |                  |
+| Validator   | Is not upgradable                                                                                                                            | Boolean          |
+|             | Is not owneable                                                                                                                              | Boolean          |
+|             | Is storage requirement 4337 compliant                                                                                                        | Boolean          |
+|             | Can authorize anything                                                                                                                       | Boolean          |
+|             | Has scoped authorization controls List of common access controls                                                                             |                  |
+|             | Is recovery module                                                                                                                           | Boolean          |
+|             | Subclassifications                                                                                                                           |                  |
+|             | [what else]                                                                                                                                  |                  |
+| Hook        | Is not upgradable                                                                                                                            | Boolean          |
+|             | Is not owneable                                                                                                                              | Boolean          |
+|             | Has external dependencies Classifications of external dependencies? Oracles / DEXs / etc                                                     | Boolean          |
+|             | Subclassifications                                                                                                                           |                  |
+|             | [what else]                                                                                                                                  |                  |
+| Fallback    | Is not upgradable                                                                                                                            | Boolean          |
+|             | Is not owneable                                                                                                                              | Boolean          |
+|             | Implements ERC2771 authorization control                                                                                                     | Boolean          |
+|             | Static call vs normal call                                                                                                                   | Boolean          |
+|             | Has external dependencies Classifications of external dependencies? Oracles / DEXs / etc                                                     | Boolean          |
+|             | Subclassifications                                                                                                                           |                  |
+|             | [what else]                                                                                                                                  |                  |
+
 ## Resources
 
 todo
