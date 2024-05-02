@@ -50,34 +50,65 @@ todo
 
 ## Rhinestone Attestation Schema
 
-| Category    | Variable                                                                                                                                     | Data type        |
-| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| Module type | Validator Policy Signer Executor Hook Fallback Module types are not mutually exclusive What are the subclassifications for each module type? | Uint (module id) |
-| Executor    | Is not upgradable                                                                                                                            | Boolean          |
-|             | Is not owneable                                                                                                                              | Boolean          |
-|             | Is pausable                                                                                                                                  | Boolean          |
-|             | Does not execute delegatecall on the account                                                                                                 | Boolean          |
-|             | Is triggered by the account                                                                                                                  | Boolean          |
-|             | Has external dependencies Classifications of external dependencies? Oracles / DEXs / etc                                                     | Boolean          |
-|             | Fee mechanism                                                                                                                                | Boolean          |
-|             | Subclassifications                                                                                                                           |                  |
-| Validator   | Is not upgradable                                                                                                                            | Boolean          |
-|             | Is not owneable                                                                                                                              | Boolean          |
-|             | Is storage requirement 4337 compliant                                                                                                        | Boolean          |
-|             | Can authorize anything                                                                                                                       | Boolean          |
-|             | Has scoped authorization controls List of common access controls                                                                             |                  |
-|             | Is recovery module                                                                                                                           | Boolean          |
-|             | Subclassifications                                                                                                                           |                  |
-| Hook        | Is not upgradable                                                                                                                            | Boolean          |
-|             | Is not owneable                                                                                                                              | Boolean          |
-|             | Has external dependencies Classifications of external dependencies? Oracles / DEXs / etc                                                     | Boolean          |
-|             | Subclassifications                                                                                                                           |                  |
-| Fallback    | Is not upgradable                                                                                                                            | Boolean          |
-|             | Is not owneable                                                                                                                              | Boolean          |
-|             | Implements ERC2771 authorization control                                                                                                     | Boolean          |
-|             | Static call vs normal call                                                                                                                   | Boolean          |
-|             | Has external dependencies Classifications of external dependencies? Oracles / DEXs / etc                                                     | Boolean          |
-|             | Subclassifications                                                                                                                           |                  |
+| Category    | Variable                                                       | Data type |
+| ----------- | -------------------------------------------------------------- | --------- |
+| Module type | According to ERC-7579 and extensions                           | Uint[]    |
+| All         | Is not upgradable                                              | Boolean   |
+|             | Module owner cannot rug account                                | Boolean   |
+|             | Is pausable                                                    | Boolean   |
+|             | External dependencies list                                     | Uint[]    |
+|             | Uses Rhinestone License Manager                                | Boolean   |
+| Validator   | Is ERC-7562 compliant                                          | Boolean   |
+|             | Subclassifications                                             | Uint[]    |
+| Executor    | Handles user assets (tokens or native assets)                  | Boolean   |
+|             | Does not execute delegatecall on the account                   | Boolean   |
+|             | Subclassifications                                             | Uint[]    |
+| Fallback    | Implements ERC-2771 to for access control and storage accesses | Boolean   |
+|             | Is called by static call                                       | Boolean   |
+|             | Implements its own access control                              | Boolean   |
+|             | Subclassifications                                             | Uint[]    |
+| Hook        | Subclassifications                                             | Uint[]    |
+
+**Note: the index in the bullet list (starting from 0) corresponds to the enum value of the classification**
+
+Validator subclassifications:
+
+- Unscoped validator
+- Scoped validator
+- Recovery
+- Multiplexer
+
+Executor subclassifications:
+
+- Triggered by the account
+- Triggered by trusted relayer
+- Deterministic executions
+
+Fallback subclassifications:
+
+- Compatibility fallback
+- Callbacks
+
+Hook subclassifications:
+
+- Allow default hooks
+- Deny default hooks
+- Access control
+- Module control
+- User control
+
+External dependencies classifications:
+
+- Oracles
+- Bridges
+- DEXs
+- Vaults
+- Registry
+- Lending
+- Liquidity Provision
+- Governance
+- Privacy
+- ZK Provers
 
 ## Resources
 
